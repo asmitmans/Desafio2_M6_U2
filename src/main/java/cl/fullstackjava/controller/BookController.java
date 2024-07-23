@@ -67,7 +67,7 @@ public class BookController {
 	}
 	
 	// Borrar un libro
-	@GetMapping("/delete/{id}")
+	@PostMapping("/delete/{id}")
 	public String deleteBook(@PathVariable Long id) {
 		bookService.deleteBook(id);
 		LOG.info("Eliminado el libro con id: {}", id);
